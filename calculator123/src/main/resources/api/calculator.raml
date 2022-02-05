@@ -1,0 +1,89 @@
+#%RAML 1.0
+title: Calculator
+version: v1.0
+description: Working on desin
+protocols:
+  - HTTPS
+  - HTTP
+
+/addtion:
+  get:
+    queryParameters:
+        number1:
+          type: integer
+          required: true
+          example: 25
+        number2:
+          type: integer
+          required: true
+          example: 25
+    responses:
+      200:
+        body:
+         application/json:
+           example:
+            {
+              "Result" : to be printed result 50 as addtion
+            }
+      400:
+        description: | 
+                     bad request
+      500:
+        description: | 
+                  try after some time
+/Subtraction:
+  put:
+    queryParameters:
+        number1:
+          type: integer
+          required: true
+          example: 25
+        number2:
+          type: integer
+          required: true
+          example: 25
+    responses:
+      200:
+        body:
+         application/json:
+           example:
+            {
+              "Result" : to be printed result 0 as Subtraction
+            }
+      400:
+        description: | 
+                     bad request
+      500:
+        description: | 
+                  try after some time
+/Multipication:
+  post:
+    queryParameters:
+        number1:
+          type: integer
+          required: true
+          example: 25
+        number2:
+          type: integer
+          required: true
+          example: 25
+    responses:
+      200:
+        body:
+         application/json:
+           example:
+            {
+              "Result" : to be printed result 0 as Subtraction
+            }
+      400:
+        description: | 
+                     bad request
+      500:
+        description: | 
+                  try after some time
+
+
+                   
+                                    
+            
+        
